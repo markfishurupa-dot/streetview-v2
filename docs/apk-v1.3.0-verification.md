@@ -40,7 +40,7 @@ The manifest's application element sets `allowBackup=true`, and the checked-in `
 - No physical Android-device recording or installation was performed in this environment.
 - We did not receive a device-test log proving that **this exact SHA-256 build** is the one used during field surveys.
 - No verification was made against the signature of a previous installed release, so in-place update compatibility is not established.
-- We could not run the Android SDK's official `apksigner` CLI here. Instead, the APK v2 signer signature and APK content digest were independently checked against the APK Signing Block using Python cryptographic primitives.
+- On 2026-11-17, the published asset was downloaded again. Android SDK Build Tools 36.0.0 `apksigner verify --verbose --print-certs` reported a valid v2 signature, one signer and certificate SHA-256 `659d32a0437090e65c6a7e0c7e749615ebfae3c84c69d4cd39843b4eb1a0a741`. `aapt dump badging` confirmed package `com.example.streetview`, version 1.3.0, version code 130, minimum SDK 26 and target SDK 36. The downloaded file's SHA-256 matched the published digest.
 - No malware/AV certification or full static application security audit was performed.
 
 ## Release verification commands

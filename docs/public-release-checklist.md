@@ -6,6 +6,7 @@
 
 ## Verified or implemented
 
+- [x] On 17 November 2026, the project owner reported testing all components, including the mobile app, and that they worked as expected. The report did not specify device models, operating system versions or the APK digest.
 - [x] Android 1.3.0 source is present in `apps/android` with release signing material excluded.
 - [x] Local Android debug build and GitHub Android debug-build workflow succeeded.
 - [x] Docker-based portal and processing workflow are implemented; earlier Windows/Docker Desktop browser and GIS export tests passed.
@@ -22,14 +23,15 @@
 - [x] The signing certificate states `CN=Mark URUPA`, certificate SHA-256 `659d32a0437090e65c6a7e0c7e749615ebfae3c84c69d4cd39843b4eb1a0a741`.
 - [x] The published GitHub prerelease contains `StreetView.apk` (13,406,645 bytes); GitHub reports SHA-256 `e0538baafce11915f1a332180ab4adcfefb7bbb6be34921a18e34fcd0ebc3aa1`, an exact match to the inspected APK.
 - [ ] Independently tie the **exact APK SHA-256** to field-device testing and verify old-device signing upgrade compatibility.
-- [ ] Run Android SDK `apksigner verify` on the distributed APK and recheck the download hash.
+- [x] Android SDK Build Tools 36.0.0 `apksigner` verified the downloaded APK's v2 signature and signer certificate; its SHA-256 matched the release asset digest. See [APK evidence](apk-v1.3.0-verification.md).
 
 See [APK candidate evidence](apk-v1.3.0-verification.md) and [published prerelease notes](releases/v2.0.0-alpha.6.md).
 
 ## Blockers for a distributable release
 
 - [x] **Android signed APK:** owner-supplied release APK published, SHA-256 and signing certificate checked, package/version metadata compared to repository source. Exact source commit provenance still requires confirmation.
-- [ ] **Android field acceptance:** provide device/version details and a test report tied to that exact APK digest, including recording, GPS logging, separate sharing, ZIP export and portal import.
+- [x] **Owner functional acceptance:** the owner reports testing all components, including the mobile app, and considers the system stable.
+- [ ] **Exact Android build evidence:** associate the owner's test with the published APK digest and record device/version details and update compatibility.
 - [ ] **Android upgrade path:** verify whether the signed APK upgrades existing installations without certificate or package-ID conflicts.
 - [ ] **Demo imagery and route:** review the public **real** 183-photo survey for faces, plates, location sensitivity, permissions and redistribution terms. The [demo dataset license](../site/public/demo/DATASET_LICENSE.md) does **not** currently grant general reuse rights.
 - [ ] **Clean install and recovery:** validate advertised platforms and demonstrate backup/restore of both PostGIS and media volumes to a separate environment.

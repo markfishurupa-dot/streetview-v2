@@ -10,7 +10,7 @@ Capture on Android → Upload → Validate → Process → Explore → Export.
 
 StreetView is an **open-source, self-hosted street-imagery workflow** for road surveys, infrastructure documentation, project planning, and construction supervision. Survey data stays in your own Docker installation unless you deliberately expose a published map or share exports. This project is not affiliated with Google Street View.
 
-**[Try the interactive demo](https://markfishurupa-dot.github.io/streetview-v2/demo/)** · **[Read the documentation](https://markfishurupa-dot.github.io/streetview-v2/)** · **[Process your first survey](https://markfishurupa-dot.github.io/streetview-v2/guide/first-survey/)**
+**[Download Android APK](https://github.com/markfishurupa-dot/streetview-v2/releases/download/v2.0.0-alpha.6/StreetView.apk)** · **[Try the interactive demo](https://markfishurupa-dot.github.io/streetview-v2/demo/)** · **[Read the documentation](https://markfishurupa-dot.github.io/streetview-v2/)**
 
 The demo is read-only. To upload videos and run processing, install the portal locally.
 

@@ -26,7 +26,7 @@ Open **http://127.0.0.1:18080/** and sign in as `admin` with the password in you
 
 Create a survey, choose **Recording files**, select either the ZIP or the two files, then press **Upload**.
 
-![Portal upload controls](/streetview-v2/images/screenshots/upload.png)
+![Portal upload controls](https://raw.githubusercontent.com/markfishurupa-dot/streetview-v2/codex/alpha-implementation/site/public/images/screenshots/upload.png)
 
 Expected result: the portal reports that sources were staged. If only one of the two files is available, upload the matching counterpart before processing.
 
@@ -34,7 +34,7 @@ Expected result: the portal reports that sources were staged. If only one of the
 
 Select **Validate sources**. The portal checks the media and GPS inputs, then shows a result with quality warnings. Use **Download report** to obtain more detail and excluded-record information.
 
-![Portal validation results and processing controls](/streetview-v2/images/screenshots/validation.png)
+![Portal validation results and processing controls](https://raw.githubusercontent.com/markfishurupa-dot/streetview-v2/codex/alpha-implementation/site/public/images/screenshots/validation.png)
 
 **Warnings are not always fatal.** Poor GPS accuracy or sudden position jumps may need review, while corrupted media, unmatched filenames or missing files can prevent processing.
 
@@ -50,13 +50,13 @@ Set **Interval** for time or distance sampling, and optionally set **Maximum GPS
 
 Start with **GPS fixes** for your first survey. Select **Process survey** and follow the progress bar. Processing runs in the background worker and can take longer for larger videos.
 
-![Processing progress and cancellation](/streetview-v2/images/screenshots/processing.png)
+![Processing progress and cancellation](https://raw.githubusercontent.com/markfishurupa-dot/streetview-v2/codex/alpha-implementation/site/public/images/screenshots/processing.png)
 
 ## 5. Explore and correct the map
 
 Once processing completes, select a photo point on the map or use **Previous photo** and **Next photo**. The photo viewer is linked to the point locations and route.
 
-![Processed survey viewer](/streetview-v2/images/screenshots/viewer.png)
+![Processed survey viewer](https://raw.githubusercontent.com/markfishurupa-dot/streetview-v2/codex/alpha-implementation/site/public/images/screenshots/viewer.png)
 
 In the authenticated workspace, selecting a point provides location and GPS details. Use **Edit** to correct coordinates or bearing, drag the map handle for a position adjustment, or choose **Delete point** to remove an unwanted point. The route reconnects neighboring points within the *same recording*. Corrections are preserved across matching reprocessing runs.
 
